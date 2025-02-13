@@ -25,6 +25,10 @@ services:
         value: production
       - key: N8N_PORT
         value: "5678"
+      - key: N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS
+        value: "true"
+      - key: PATH
+        value: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
     disk:
       name: n8n-data
       mountPath: /root/.n8n
