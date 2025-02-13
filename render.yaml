@@ -29,7 +29,13 @@ services:
         value: "true"
       - key: PATH
         value: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+      - key: N8N_USER_FOLDER
+        value: "/home/node/.n8n"
+      - key: DB_TYPE
+        value: sqlite
+      - key: DB_PATH
+        value: "/home/node/.n8n/database.sqlite"
     disk:
       name: n8n-data
-      mountPath: /root/.n8n
+      mountPath: /home/node/.n8n
       sizeGB: 10 
